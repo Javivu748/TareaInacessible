@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        body {
+            background: #1a1a1a;
+            font-family: 'Courier New';
+            cursor: crosshair;
+            overflow: hidden;
+        }
+        
+        .content {
+            color: #2a2a2a;
+            font-size: 6px;
+            text-align: center;
+            letter-spacing: -2px;
+            line-height: 0.8;
+        }
+        
+        .rotate {
+            transform: rotate(180deg);
+            display: inline-block;
+        }
+        
+        .invisible-text {
+            color: #1a1a1a;
+            position: absolute;
+            left: 5000px;
+        }
+        
+        .tiny-click {
+            width: 2px;
+            height: 2px;
+            background: transparent;
+            border: none;
+            position: absolute;
+            left: 78%;
+            top: 42%;
+        }
+        
+        .sideways {
+            writing-mode: vertical-rl;
+            text-orientation: sideways;
+            font-size: 5px;
+        }
+        
+        .overlap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.3;
+        }
+        
+        input {
+            width: 10px;
+            height: 10px;
+            opacity: 0.1;
+            border: none;
+        }
+        
+        .blur {
+            filter: blur(3px);
+        }
+        
+        .upside {
+            transform: scaleY(-1);
+        }
+        
+        a {
+            color: #1b1b1b;
+            text-decoration: none;
+            font-size: 4px;
+        }
+        
+        .mirror {
+            transform: scaleX(-1);
+            display: inline-block;
+        }
+        
+        marquee {
+            font-size: 3px;
+            color: #2a2a2a;
+        }
+        
+        .hidden-scroll {
+            width: 50px;
+            height: 20px;
+            overflow: scroll;
+            border: 1px solid #2a2a2a;
+        }
+        
+        .hidden-scroll div {
+            width: 500px;
+            font-size: 5px;
+        }
+        
+        table {
+            border-collapse: collapse;
+        }
+        
+        td {
+            padding: 0;
+            font-size: 4px;
+        }
+        
+        .noise {
+            background: repeating-linear-gradient(
+                45deg,
+                #1a1a1a,
+                #1a1a1a 1px,
+                #1b1b1b 1px,
+                #1b1b1b 2px
+            );
+        }
+        
+        select {
+            width: 15px;
+            font-size: 3px;
+            opacity: 0.2;
+        }
+        
+        .random-pos {
+            position: absolute;
+            left: 23%;
+            top: 67%;
+        }
+        
+        .backwards {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+        }
+        
+        iframe {
+            width: 5px;
+            height: 5px;
+            border: none;
+        }
+    </style>
+</head>
+<body class="noise">
+    
+    <div class="invisible-text">
+        Esta es información importante que necesitas leer pero está completamente fuera de la pantalla y es imposible de encontrar sin inspeccionar el código
+    </div>
+    
+    <marquee direction="right" scrollamount="1">
+        información vital aquí
+    </marquee>
+    
+    <div class="content blur">
+        
+        <div class="rotate">
+            <h1>oitisotibew</h1>
+        </div>
+        
+        <div class="overlap">
+            <p>texto superpuesto texto superpuesto texto superpuesto texto superpuesto texto superpuesto</p>
+        </div>
+        
+        <div class="sideways">
+            Para continuar haz click en el botón invisible
+        </div>
+        
+        <br><br><br><br><br>
+        
+        <table>
+            <tr>
+                <td>f</td><td>o</td><td>r</td><td>m</td><td>u</td><td>l</td><td>a</td><td>r</td><td>i</td><td>o</td>
+            </tr>
+        </table>
+        
+        <form>
+            <input type="text" placeholder="">
+            <input type="email">
+            <input type="password">
+            <button style="width: 3px; height: 3px; background: transparent; border: none;"></button>
+        </form>
+        
+        <br><br>
+        
+        <div class="hidden-scroll">
+            <div>Desplázate horizontalmente para leer este mensaje super importante que está oculto en un área diminuta con scroll horizontal</div>
+        </div>
+        
+        <br><br>
+        
+        <div class="mirror">
+            <a href="#">ocne elbinopsid otxet</a>
+        </div>
+        
+        <br><br>
+        
+        <select>
+            <option></option>
+            <option>a</option>
+            <option>b</option>
+            <option>c</option>
+        </select>
+        
+        <br><br>
+        
+        <div class="upside">
+            <p>Este texto está al revés y es muy pequeño para leer</p>
+        </div>
+        
+        <br><br>
+        
+        <div class="backwards">
+            senoiccurtsni satse reel ebeD
+        </div>
+        
+        <br><br>
+        
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1" height="1">
+        
+        <button class="tiny-click" title="">.</button>
+        
+        <div class="random-pos">
+            <span style="font-size: 2px; color: #252525;">enlace crítico</span>
+        </div>
+        
+        <br><br><br><br>
+        
+        <iframe src=""></iframe>
+        
+        <br><br>
+        
+        <div style="position: absolute; left: -5000px;">
+            <h2>Título importante oculto</h2>
+            <p>Contenido vital que está fuera de la pantalla</p>
+        </div>
+        
+        <div style="opacity: 0.01;">
+            <p>Este texto es casi transparente y prácticamente invisible</p>
+        </div>
+        
+        <br><br>
+        
+        <div onclick="alert('Has encontrado el área clickeable invisible');" style="width: 100px; height: 100px; position: absolute; left: 200px; top: 300px;"></div>
+        
+        <div style="font-size: 1px; color: #1b1b1b;">
+            Los términos y condiciones están escritos en tamaño 1px con casi el mismo color que el fondo
+        </div>
+        
+    </div>
+    
+    <div style="position: fixed; bottom: 0; right: 0; width: 5px; height: 5px; background: #2a2a2a;">
+        <a href="#" style="color: #2a2a2a; font-size: 1px;">menú</a>
+    </div>
+    
+</body>
+</html>
